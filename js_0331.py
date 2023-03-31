@@ -15,7 +15,7 @@ import requests
 import os
 import js
 
-directory_path = os.path.dirname(os.path.abspath(__file__)) #当前文件所在文件夹路径
+directory_path = os.path.dirname(__file__) #当前文件所在文件夹路径
 node = execjs.get()
 execjs.compile(js,cwd=f"{directory_path}/node_modules") #这里是配置node_modules，这样才能调用js里的crypto-js
 
